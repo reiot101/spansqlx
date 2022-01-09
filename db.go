@@ -73,10 +73,10 @@ func Open(ctx context.Context, opts ...Option) (*DB, error) {
 }
 
 // NewDb returns an DB instance.
-func NewDb(ctx context.Context, db *spanner.Client) (*DB, error) {
+func NewDb(ctx context.Context, db *spanner.Client) *DB {
 	return &DB{
 		db: db,
-	}, nil
+	}
 }
 
 // open spanner database connection
