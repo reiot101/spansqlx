@@ -3,10 +3,10 @@ module github.com/reiot101/spansqlx
 go 1.17
 
 require (
-	cloud.google.com/go/spanner v1.29.0
+	cloud.google.com/go/spanner v1.24.0
 	github.com/golang-migrate/migrate/v4 v4.15.1
-	google.golang.org/api v0.63.0
-	google.golang.org/genproto v0.0.0-20211208223120-3a66f561d7aa
+	google.golang.org/api v0.61.0
+	google.golang.org/genproto v0.0.0-20211206160659-862468c7d6e0
 	google.golang.org/grpc v1.41.0
 )
 
