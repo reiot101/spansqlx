@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"cloud.google.com/go/spanner"
-	"github.com/reiot777/spansqlx/internal"
+	"github.com/reiot101/spansqlx/internal"
 	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"
 )

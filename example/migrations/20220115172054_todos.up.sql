@@ -1,0 +1,5 @@
+CREATE TABLE todos (
+  id STRING(36) NOT NULL,
+  name STRING(140) NOT NULL,
+  done BOOL NOT NULL,
+) PRIMARY KEY (id)

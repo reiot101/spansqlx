@@ -3,7 +3,7 @@ spanner sql pkgs
 
 ## install
 ```
-go get github.com/reiot777/spansqlx
+go get github.com/reiot101/spansqlx
 ```
 
 ## usage
@@ -16,7 +16,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/reiot777/spansqlx"
+	"github.com/reiot101/spansqlx"
 )
 
 func main() {

@@ -5,7 +5,7 @@ import (
 	"reflect"
 
 	"cloud.google.com/go/spanner"
-	"github.com/reiot777/spansqlx/reflectx"
+	"github.com/reiot101/spansqlx/reflectx"
 )
 
 // ScanAll scans all rows into a destination, which must be a slice of any

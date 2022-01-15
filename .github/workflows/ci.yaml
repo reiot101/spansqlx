@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      spanner_emulator:
+        image: gcr.io/cloud-spanner-emulator/emulator:1.4.0
+        ports:
+          - 9010:9010
+          - 9020:9020
+    steps:
+      - uses: actions/checkout@v2
+
+      # create a spanner instance
+      - uses: google-github-actions/setup-gcloud@master
+        with:
+          version: "290.0.1"
+      - run: gcloud info
+      - run: gcloud config configurations create emulator
+      - run: gcloud config set auth/disable_credentials true
+      - run: gcloud config set project sandbox
+      - run: gcloud config set api_endpoint_overrides/spanner http://localhost:9020/
+      # - run: gcloud spanner instances create sandbox --config=emulator-config --description="sandbox instance" --nodes=1
+      # - run: gcloud spanner databases create sandbox --instances=sandbox
+
+      # run tests
+      - uses: actions/setup-go@v2
+        with:
+          go-version: "1.16"
+      - run: go version
+      - run: go test -v ./...
+        env:
+          SPANNER_EMULATOR_HOST: localhost:9010
+          SPANNER_DATABASE: projects/sandbox/instances/sandbox/databases/dansbox
+          SPANNER_MIGRATION: file://./../migrations
+          # for private
+          # SPANNER_MIGRATION: github://user:${{ secrets.PERSONAL_ACCESS_TOKEN }}/repo/path#ref
+          # for public
+          # SPANNER_MIGRATION: github://owner/repo/path#ref

@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"cloud.google.com/go/spanner"
-	"github.com/reiot777/spansqlx"
+	"github.com/reiot101/spansqlx"
 )
 
 type Singer struct {

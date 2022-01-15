@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  spanner-emulator:
+    container_name: spanner-emulator
+    image: gcr.io/cloud-spanner-emulator/emulator:latest
+    ports: 
+      - 9010:9010
+      - 9020:9020
+    networks:
+      - sandbox-net
+
+networks:
+  sandbox-net:
+    external: true
