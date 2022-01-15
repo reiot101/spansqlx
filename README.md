@@ -1,7 +1,7 @@
 
 # spansqlx
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/reiot101/spansqlx/CI/main)](https://github.com/reiot101/spansqlx/actions/workflows/ci.yaml?query=branch%3Amain)
-[![Coverage Status](https://coveralls.io/repos/github/reiot101/spansqlx/badge.svg?branch=main)](https://coveralls.io/github/reiot101/spansqlx?branch=main)
+<!-- [![Coverage Status](https://coveralls.io/repos/github/reiot101/spansqlx/badge.svg?branch=main)](https://coveralls.io/github/reiot101/spansqlx?branch=main) -->
 ![Supported Go Versions](https://img.shields.io/badge/Go-1.16%2C%201.17-lightgrey.svg)
 [![GitHub Release](https://img.shields.io/github/release/reiot101/spansqlx.svg)](https://github.com/reiot101/spansqlx/releases)
 
