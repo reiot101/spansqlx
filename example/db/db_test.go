@@ -31,7 +31,7 @@ func NewTestClient(t *testing.T, reset bool) (*spansqlx.DB, error) {
 		t.Fatal(err)
 	}
 
-	path := "./../migrations"
+	path := "file://./../migrations"
 	if v := os.Getenv("SPANNER_MIGRATION"); v != "" {
 		path = v
 	}
